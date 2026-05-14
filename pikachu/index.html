@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pokémon – Pikachu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <!-- Panels -->
+    <div class="panel-left"></div>
+    <div class="panel-right"></div>
+
+    <!-- Pokéball watermark -->
+    <div class="pokeball-bg"></div>
+
+    <!-- Logo -->
+    <div class="logo">
+     
+      <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo">
+</div>
+    </div>
+
+    <!-- Hamburger -->
+    <div class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Text Content -->
+    <div class="content">
+      <p class="gen-label">Pokemon Gen I</p>
+      <h1 class="pokemon-name">Pikachu</h1>
+      <p class="description">
+        Pikachu is an Electric-type Pokémon introduced in Generation I.
+        Pikachu are small, chubby, and incredibly cute mouse-like Pokémon.
+        They are almost completely covered by yellow fur.
+      </p>
+      <div class="counter">
+        <span class="counter-line"></span>
+        <span>01 / 08</span>
+      </div>
+    </div>
+
+    <!-- Pikachu PNG (transparent background from PokeAPI / fan CDN) -->
+    <img
+      class="pikachu"
+      src="https://www.pokepedia.fr/images/thumb/2/21/Pikachu-LGPE.png/500px-Pikachu-LGPE.png"
+      alt="Pikachu"
+      onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png'"
+    />
+
+    <!-- Dot pagination -->
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+</body>
+</html>
