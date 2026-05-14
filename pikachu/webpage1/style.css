@@ -1,0 +1,751 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pink: #e879a0;
+  --pink-light: #fce8ef;
+  --pink-pale: #fdf2f6;
+  --dark: #1a1a1a;
+  --white: #ffffff;
+  --grey-100: #f5f5f5;
+  --grey-200: #eeeeee;
+  --grey-400: #999;
+  --grey-600: #555;
+  --green: #22c55e;
+  --radius: 20px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #1e1e2e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* ===== DASHBOARD GRID ===== */
+.dashboard {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 280px;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  max-width: 1300px;
+  width: 100%;
+}
+
+/* ===== CARD BASE ===== */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== SHARED ELEMENTS ===== */
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.dots {
+  font-size: 18px;
+  color: var(--grey-400);
+  letter-spacing: 2px;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 12px;
+}
+
+.stat-sub {
+  font-size: 13px;
+  color: var(--grey-600);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--dark);
+  text-decoration: none;
+  margin-top: 12px;
+  font-weight: 500;
+  border: 1px solid var(--grey-200);
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.view-link:hover {
+  background: var(--grey-100);
+}
+
+.card-small-label {
+  font-size: 13px;
+  color: var(--grey-600);
+  margin-bottom: 4px;
+}
+
+.vs-text {
+  font-size: 12px;
+  color: var(--grey-400);
+  margin-top: 2px;
+}
+
+.trend-up {
+  background: var(--pink-light);
+  color: var(--pink);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.trend-green {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ===========================
+   CARD 1: Brand of Designing
+   Grid: col 1, row 1 span 2
+=========================== */
+.card-brand {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ring-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.ring {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.ring-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: var(--pink-light);
+  stroke-width: 8;
+}
+
+.ring-fill {
+  fill: none;
+  stroke: var(--pink);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 264;
+  stroke-dashoffset: 66; /* 25% gap = 75% fill */
+}
+
+.ring-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.ring-percent {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.ring-label {
+  display: block;
+  font-size: 12px;
+  color: var(--grey-400);
+  margin-top: 2px;
+}
+
+/* ===========================
+   CARD 2: Project Views
+   Grid: col 2, row 1
+=========================== */
+.card-views {
+  grid-column: 2;
+  grid-row: 1;
+  background: var(--white);
+}
+
+.views-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1;
+}
+
+.views-heart {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--pink-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-icon {
+  color: var(--pink);
+  font-size: 20px;
+}
+
+.views-label {
+  font-size: 14px;
+  color: var(--grey-600);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.views-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* ===========================
+   CARD 3: New Users
+   Grid: col 3, row 1
+=========================== */
+.card-users {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.users-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.users-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1;
+}
+
+.users-growth {
+  margin-top: 6px;
+}
+
+.users-icon {
+  margin-top: 4px;
+}
+
+/* ===========================
+   CARD 4: Team + Daily Clients
+   Grid: col 4, row 1 span 2
+=========================== */
+.card-team {
+  grid-column: 4;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.team-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+.team-avatars {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: -8px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  margin-right: -8px;
+  object-fit: cover;
+}
+
+.avatar-more {
+  background: var(--dark);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--grey-200);
+  margin: 20px 0;
+}
+
+.clients-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.clients-label {
+  font-size: 14px;
+  color: var(--grey-600);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.clients-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1;
+}
+
+.clients-growth {
+  margin-top: 6px;
+}
+
+.clients-icon {
+  margin-top: 4px;
+}
+
+/* ===========================
+   CARD 5: Smart Digital Agency
+   Grid: col 1, row 3
+=========================== */
+.card-agency {
+  grid-column: 1;
+  grid-row: 3;
+  background: var(--dark);
+  color: var(--white);
+}
+
+.agency-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--white);
+}
+
+.agency-highlight {
+  color: var(--pink);
+}
+
+.agency-photos {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.agency-photo {
+  width: calc(50% - 5px);
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.agency-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.mini-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.mini-av {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--dark);
+  margin-right: -6px;
+  object-fit: cover;
+}
+
+.mini-plus {
+  background: var(--pink);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+}
+
+.agency-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: var(--white);
+  background: rgba(255,255,255,0.1);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================
+   CARD 6: Hero Center
+   Grid: col 2-3, row 2 span 2
+=========================== */
+.card-hero {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  background: var(--pink-pale);
+  padding: 0;
+  min-height: 480px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* Floating Cards inside Hero */
+.float-card {
+  position: absolute;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.float-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.float-dots {
+  color: var(--grey-400);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* Project Growth - top left of hero */
+.float-growth {
+  bottom: 200px;
+  left: 20px;
+  width: 180px;
+}
+
+/* Total Plays - bottom left */
+.float-plays {
+  bottom: 30px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.play-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--pink);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.plays-num {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.plays-label {
+  font-size: 12px;
+  color: var(--grey-400);
+}
+
+/* Conversion Age - top right */
+.float-chart {
+  top: 30px;
+  right: 20px;
+  width: 200px;
+}
+
+.bar-chart {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  height: 65px;
+  padding-top: 4px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  min-width: 14px;
+}
+
+.bar-label {
+  font-size: 9px;
+  color: var(--grey-400);
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* Engagement Rate - bottom right */
+.float-engage {
+  bottom: 30px;
+  right: 20px;
+  width: 170px;
+}
+
+.engage-heart {
+  color: var(--pink);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.engage-dots {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.engage-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.engage-label {
+  font-size: 12px;
+  color: var(--grey-600);
+  margin-top: 2px;
+}
+
+.engage-growth {
+  margin-top: 6px;
+}
+
+/* ===========================
+   CARD 7: Font
+   Grid: col 2, row 4
+=========================== */
+.card-font {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.font-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.font-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.font-sample {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grey-400);
+}
+
+.font-name {
+  font-size: 14px;
+  color: var(--grey-600);
+  margin-top: 8px;
+}
+
+.font-swatches {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.swatch-dark   { background: #222; }
+.swatch-grey   { background: #aaa; }
+.swatch-pink   { background: var(--pink); }
+.swatch-light  { background: var(--pink-light); }
+
+/* ===========================
+   CARD 8: We Build Future
+   Grid: col 3, row 4
+=========================== */
+.card-future {
+  grid-column: 3;
+  grid-row: 4;
+  background: var(--white);
+}
+
+.future-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.3;
+  max-width: 200px;
+}
+
+.future-sub {
+  font-size: 13px;
+  color: var(--grey-600);
+  margin-top: 8px;
+}
+
+.explore-btn {
+  margin-top: 20px;
+  background: var(--dark);
+  color: var(--white);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.explore-btn:hover {
+  background: #333;
+}
+
+.future-decor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.decor-blob {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #f9a8d4 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(30px, 30px);
+}
+
+/* ===========================
+   CARD 9: CUBO
+   Grid: col 4, row 3 span 2
+=========================== */
+.card-cubo {
+  grid-column: 4;
+  grid-row: 3 / 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--pink-pale);
+}
+
+.cubo-logo {
+  margin-bottom: 16px;
+}
+
+.cubo-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--dark);
+  letter-spacing: 2px;
+}
+
+.cubo-sub {
+  font-size: 14px;
+  color: var(--grey-600);
+  margin-top: 4px;
+}
+
+.discover-btn {
+  margin-top: 24px;
+  background: var(--pink-light);
+  color: var(--dark);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.discover-btn:hover {
+  background: #f9c6d9;
+}

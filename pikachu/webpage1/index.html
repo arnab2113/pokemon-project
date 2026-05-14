@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design Agency Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="dashboard">
+
+    <!-- Card 1: Brand of Designing -->
+    <div class="card card-brand">
+      <div class="card-header">
+        <span class="card-title">Brand of Designing</span>
+        <span class="dots">···</span>
+      </div>
+      <div class="ring-wrapper">
+        <div class="ring">
+          <svg viewBox="0 0 100 100" class="ring-svg">
+            <circle cx="50" cy="50" r="42" class="ring-bg"/>
+            <circle cx="50" cy="50" r="42" class="ring-fill"/>
+          </svg>
+          <div class="ring-text">
+            <span class="ring-percent">75%</span>
+            <span class="ring-label">Progress</span>
+          </div>
+        </div>
+      </div>
+      <div class="stat-number">2.5K</div>
+      <div class="stat-sub">263 contributions in the last year</div>
+      <a class="view-link" href="#">View report <span>›</span></a>
+    </div>
+
+    <!-- Card 2: Project Views -->
+    <div class="card card-views">
+      <div class="views-number">4.875</div>
+      <div class="views-heart">
+        <span class="heart-icon">♥</span>
+      </div>
+      <div class="views-label">Project Views<br/>last year</div>
+      <div class="views-badge">
+        <span class="trend-up">↗ +15%</span>
+        <span class="vs-text">vs last year</span>
+      </div>
+    </div>
+
+    <!-- Card 3: New Users -->
+    <div class="card card-users">
+      <div class="users-top">
+        <div>
+          <div class="card-small-label">New Users</div>
+          <div class="users-number">57K</div>
+          <div class="users-growth"><span class="trend-green">+10% ↗</span></div>
+          <div class="vs-text">vs last month</div>
+        </div>
+        <div class="users-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="#fce8ef"/>
+            <path d="M13 28c0-3.866 3.134-7 7-7s7 3.134 7 7M20 18a4 4 0 100-8 4 4 0 000 8z" stroke="#e879a0" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Team -->
+    <div class="card card-team">
+      <div class="team-text">Team of passionate designers and developers</div>
+      <div class="team-avatars">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar" alt=""/>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar" alt=""/>
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar" alt=""/>
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" class="avatar" alt=""/>
+        <span class="avatar avatar-more">+2</span>
+      </div>
+      <div class="divider"></div>
+      <div class="clients-section">
+        <div>
+          <div class="clients-label">Daily<br/>New clients</div>
+          <div class="clients-number">54</div>
+          <div class="clients-growth"><span class="trend-green">+40% ↗</span></div>
+          <div class="vs-text">vs yesterday</div>
+        </div>
+        <div class="clients-icon">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="#fce8ef"/>
+            <path d="M27 28v-2a4 4 0 00-4-4h-6a4 4 0 00-4 4v2M20 18a4 4 0 100-8 4 4 0 000 8zM29 14v6M32 17h-6" stroke="#e879a0" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5: Smart Digital Agency (dark) -->
+    <div class="card card-agency">
+      <div class="agency-text">Smart Digital Agency For Your <span class="agency-highlight">Business</span></div>
+      <div class="agency-photos">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" class="agency-photo" alt=""/>
+        <img src="https://images.unsplash.com/photo-1598257006463-f1b4f99b2688?w=200&q=80" class="agency-photo" alt=""/>
+      </div>
+      <div class="agency-footer">
+        <div class="mini-avatars">
+          <img src="https://randomuser.me/api/portraits/women/12.jpg" class="mini-av" alt=""/>
+          <img src="https://randomuser.me/api/portraits/men/14.jpg" class="mini-av" alt=""/>
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" class="mini-av" alt=""/>
+          <span class="mini-av mini-plus">+</span>
+        </div>
+      </div>
+      <div class="agency-arrow">↗</div>
+    </div>
+
+    <!-- Card 6: Center Hero -->
+    <div class="card card-hero">
+      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" class="hero-img" alt="Woman using phone"/>
+      <!-- Floating: Project Growth -->
+      <div class="float-card float-growth">
+        <div class="float-title">Project Growth <span class="float-dots">···</span></div>
+        <svg width="130" height="55" viewBox="0 0 130 55">
+          <polyline points="5,50 30,35 55,40 80,20 110,25 125,8"
+            fill="none" stroke="#e879a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="125" cy="8" r="4" fill="#e879a0"/>
+        </svg>
+      </div>
+      <!-- Floating: Plays -->
+      <div class="float-card float-plays">
+        <div class="play-btn">▶</div>
+        <div>
+          <div class="plays-num">26.807</div>
+          <div class="plays-label">Total Plays</div>
+        </div>
+      </div>
+      <!-- Floating: Conversion Age chart -->
+      <div class="float-card float-chart">
+        <div class="float-title">Conversion Age <span class="float-dots">···</span></div>
+        <div class="bar-chart">
+          <div class="bar-group"><div class="bar" style="height:30px;background:#f9a8d4"></div><div class="bar" style="height:42px;background:#fb923c"></div><div class="bar-label">18–24</div></div>
+          <div class="bar-group"><div class="bar" style="height:50px;background:#f9a8d4"></div><div class="bar" style="height:38px;background:#fb923c"></div><div class="bar-label">25–34</div></div>
+          <div class="bar-group"><div class="bar" style="height:44px;background:#f9a8d4"></div><div class="bar" style="height:55px;background:#fb923c"></div><div class="bar-label">35–44</div></div>
+          <div class="bar-group"><div class="bar" style="height:32px;background:#f9a8d4"></div><div class="bar" style="height:28px;background:#fb923c"></div><div class="bar-label">45+</div></div>
+        </div>
+      </div>
+      <!-- Floating: Engagement Rate -->
+      <div class="float-card float-engage">
+        <div class="engage-heart">♥</div>
+        <div class="float-dots engage-dots">···</div>
+        <div class="engage-num">19,46%</div>
+        <div class="engage-label">Engagement Rate</div>
+        <div class="engage-growth"><span class="trend-green">↗ +102,48%</span></div>
+      </div>
+    </div>
+
+    <!-- Card 7: Font -->
+    <div class="card card-font">
+      <div class="font-header">
+        <span class="font-title">Font</span>
+        <span class="font-sample">Aa</span>
+      </div>
+      <div class="font-name">Sk- Modernist</div>
+      <div class="font-swatches">
+        <span class="swatch swatch-dark"></span>
+        <span class="swatch swatch-grey"></span>
+        <span class="swatch swatch-pink"></span>
+        <span class="swatch swatch-light"></span>
+      </div>
+      <a class="view-link" href="#">View all fonts <span>›</span></a>
+    </div>
+
+    <!-- Card 8: We Build Future -->
+    <div class="card card-future">
+      <div class="future-text">We Build Future of Design Industry</div>
+      <div class="future-sub">Crafting Meaningful UX/UI Design</div>
+      <button class="explore-btn">Explore more ›</button>
+      <div class="future-decor">
+        <div class="decor-blob"></div>
+      </div>
+    </div>
+
+    <!-- Card 9: CUBO -->
+    <div class="card card-cubo">
+      <div class="cubo-logo">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <circle cx="22" cy="22" r="18" stroke="#222" stroke-width="1.5" fill="none"/>
+          <circle cx="38" cy="22" r="18" stroke="#222" stroke-width="1.5" fill="none"/>
+          <circle cx="30" cy="36" r="18" stroke="#222" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="cubo-name">CUBO</div>
+      <div class="cubo-sub">Digital Studio</div>
+      <button class="discover-btn">Discover more ›</button>
+    </div>
+
+  </div>
+</body>
+</html>
