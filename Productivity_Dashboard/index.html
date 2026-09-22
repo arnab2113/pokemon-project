@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="time-weather">
+            <span id="date-time-display">Loading time...</span>
+            <span class="divider">|</span>
+            <span id="location-display">📍 Locating...</span>
+            <span class="divider">|</span>
+            <span id="weather-display">Fetching weather...</span>
+        </div>
+        <div class="theme-switch">
+            <button id="theme-toggle">🌗 Toggle Theme</button>
+        </div>
+    </div>
+
+    <main id="dashboard" class="fullscreen-container">
+        <div class="card" onclick="openFeature('todo-view')">
+            <h2>📝</h2>
+            <h3>Todo List</h3>
+        </div>
+        <div class="card" onclick="openFeature('planner-view')">
+            <h2>📅</h2>
+            <h3>Daily Planner</h3>
+        </div>
+        <div class="card" onclick="openFeature('pomodoro-view')">
+            <h2>⏱️</h2>
+            <h3>Pomodoro Timer</h3>
+        </div>
+        <div class="card" onclick="openFeature('quote-view')">
+            <h2>💡</h2>
+            <h3>Motivation</h3>
+        </div>
+        <div class="card" onclick="openFeature('goals-view')">
+            <h2>🎯</h2>
+            <h3>Daily Goals</h3>
+        </div>
+    </main>
+
+    <section id="todo-view" class="feature-view">
+        <button class="back-btn" onclick="goHome()">← Back to Dashboard</button>
+        <div class="feature-content">
+            <h2>Todo List</h2>
+            <div class="input-group">
+                <input type="text" id="todo-input" placeholder="What needs to be done?">
+                <button onclick="addTodo()">Add Task</button>
+            </div>
+            <ul id="todo-list" class="task-list"></ul>
+        </div>
+    </section>
+
+    <section id="planner-view" class="feature-view">
+        <button class="back-btn" onclick="goHome()">← Back to Dashboard</button>
+        <div class="feature-content">
+            <h2>Daily Planner</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Schedule your day.</p>
+            <div id="planner-list" class="task-list planner-list">
+                </div>
+        </div>
+    </section>
+
+    <section id="pomodoro-view" class="feature-view">
+        <button class="back-btn" onclick="goHome()">← Back to Dashboard</button>
+        <div class="feature-content pomodoro-content">
+            <h2>Pomodoro Timer</h2>
+            <h3 id="session-label">Work Session</h3>
+            <div id="timer-display">25:00</div>
+            <div class="timer-controls">
+                <button class="btn-success" onclick="startTimer()">Start</button>
+                <button class="btn-warning" onclick="pauseTimer()">Pause</button>
+                <button class="btn-danger" onclick="resetTimer()">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote-view" class="feature-view">
+        <button class="back-btn" onclick="goHome()">← Back to Dashboard</button>
+        <div class="feature-content quote-content">
+            <h2>Daily Motivation</h2>
+            <blockquote id="quote-text">Loading inspiring quote...</blockquote>
+            <p id="quote-author"></p>
+            <button onclick="fetchQuote()">Get New Quote</button>
+        </div>
+    </section>
+
+    <section id="goals-view" class="feature-view">
+        <button class="back-btn" onclick="goHome()">← Back to Dashboard</button>
+        <div class="feature-content">
+            <h2>Daily Goals</h2>
+            <p id="goal-progress" class="progress-text">Progress: 0 of 0 completed</p>
+            <div class="input-group">
+                <input type="text" id="goal-input" placeholder="Set a big goal for today...">
+                <button onclick="addGoal()">Add Goal</button>
+            </div>
+            <ul id="goals-list" class="task-list"></ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

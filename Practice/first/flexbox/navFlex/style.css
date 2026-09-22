@@ -1,0 +1,56 @@
+*{
+    height: 100%;
+    width: 100%;
+    
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+/* .nav{
+    background-color: royalblue;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+}
+.part2{
+    display: flex;
+} */
+ .parent{
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    display: flex;
+    overflow: auto;
+
+}
+.chield1{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+.chield2{
+    height: 100px;
+    width:100px;
+    background-color:gray ;
+}
+.chield3{
+    height: 100px;
+    width: 100px;
+    background-color: skyblue;
+}
+.chield5{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+}
+.chield6{
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+}

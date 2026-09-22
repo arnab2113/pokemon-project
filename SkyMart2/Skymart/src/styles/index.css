@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* ========================================
+   Tailwind v4: Class-based dark mode
+   ======================================== */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ========================================
+   Custom Theme Tokens (replaces tailwind.config.js)
+   ======================================== */
+@theme {
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  --color-accent-50: #fff7ed;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea580c;
+
+  --color-neon: #c8ff00;
+  --color-neon-light: #d4ff33;
+
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  --shadow-glass-dark: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-subtle: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 20px -5px rgba(16, 185, 129, 0.4);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ========================================
+   Base Layer
+   ======================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen antialiased;
+  }
+
+  ::selection {
+    @apply bg-emerald-500 text-white;
+  }
+}
+
+/* ========================================
+   Glassmorphism Utilities
+   ======================================== */
+.glass-panel {
+  @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/60;
+}
+
+.glass-card {
+  @apply bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border border-slate-100 dark:border-slate-800/80 shadow-subtle;
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  box-shadow: 0 10px 40px -4px rgba(0, 0, 0, 0.12);
+}
+
+.glass-input {
+  @apply bg-slate-100/70 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700/80 focus:border-emerald-500 dark:focus:border-emerald-500 focus:bg-white dark:focus:bg-slate-900 transition-all outline-none;
+}
+
+/* ========================================
+   Custom Scrollbar
+   ======================================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-emerald-500;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
