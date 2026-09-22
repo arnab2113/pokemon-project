@@ -125,7 +125,7 @@ const ProductForm = ({ initialData, onSubmit, isEditing = false }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1">
-            Price ($) <span className="text-red-500">*</span>
+            Price (₹) <span className="text-red-500">*</span>
           </label>
           <input
             type="number"
@@ -136,7 +136,7 @@ const ProductForm = ({ initialData, onSubmit, isEditing = false }) => {
             required
             min="0"
             step="0.01"
-            placeholder="29.99"
+            placeholder="2999"
             className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 text-sm"
           />
         </div>

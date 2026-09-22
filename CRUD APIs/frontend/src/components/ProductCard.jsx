@@ -67,7 +67,7 @@ const ProductCard = ({ product, onDelete }) => {
           <div className="flex items-center justify-between my-3 pt-3 border-t border-gray-100">
             <div>
               <span className="text-2xl font-bold text-gray-900">
-                ${Number(product.price).toFixed(2)}
+                ₹{Number(product.price).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             </div>
 
